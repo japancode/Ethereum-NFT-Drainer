@@ -4,7 +4,7 @@
 This is the simplest drainer that sends mint commissions & nfts to your address, that's all.
 
 Recently, cases of theft of collections of NFTs and cryptocurrencies have become more frequent. It's all about fake nft mints, this repository will help you understand how they work.
-> :warning: **Attention**
+> :warning: **Attention:**
 > Use this script for educational purposes only.
 
 ![Demo](screenshot.png)

